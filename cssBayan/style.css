@@ -1,0 +1,29 @@
+html, 
+body {
+
+	line-height: 1;
+	font-size: 2rem;
+	background-color: #c6ebbf;
+	margin: auto;
+	scroll-behavior: smooth;
+	}
+.bayan__container {
+
+	display: flex;
+	flex-direction: column;
+	overflow: hidden;
+}	
+.bayan__item{
+
+	display: flex;
+	flex-direction: column;
+	align-content: center;
+	align-items: center;
+	}
+
+.mem__image{
+	align-content: center;
+	align-items: center;
+	justify-content: center;
+	
+}
