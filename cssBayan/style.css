@@ -35,12 +35,15 @@ body {
 	display: flex;
 	flex-direction: column;
 	border-top:  #a1a5a1 solid 0.05rem ;
+	cursor: pointer;
+	margin: 2%;
 }
 
 .mem__image{
 	width: 100%;	
 	height: 100%;
 	display: none;
+	
 }
 img {
 	width: 60%;
@@ -64,9 +67,10 @@ input:checked {
 	flex-wrap: wrap;
 	justify-content: space-between;
 
+	cursor: pointer;
 }
 
-#mem1:checked ~ .mem__image{
+#mem1:checked .mem__image{
 	display:block;
 	opacity: 1;
 	visibility: visible;
@@ -75,9 +79,17 @@ input:checked {
 	display: none;
 }
 
-
+.bayan__item:target {
+	display:block;
+	opacity: 1;
+	visibility: visible;
+}
+#mem2 {
+	display: none;
+}
 .bayan__item:hover .mem__image{
 	display: flex;
+	
 }
 .bayan__arrow{
 	writing-mode: vertical-rl;
@@ -90,6 +102,9 @@ input:checked {
 
 }
 
+.bayan__head:hover {
+	color: blue;
+}
 /*
 .bayan__cross{
 	display: none;
