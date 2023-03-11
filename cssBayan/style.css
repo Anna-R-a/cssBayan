@@ -1,29 +1,101 @@
 html, 
 body {
-
+	width: 100vw;
+	height: 100vh;
 	line-height: 1;
-	font-size: 2rem;
+	font-size: 1rem;
 	background-color: #c6ebbf;
-	margin: auto;
+	margin: 0 auto;
 	scroll-behavior: smooth;
+	box-sizing: border-box;
+	font-family:Arial, Helvetica, sans-serif;
 	}
 .bayan__container {
-
+	max-width: 100%;
 	display: flex;
 	flex-direction: column;
 	overflow: hidden;
+	align-items: center;
+	margin: 0 auto;
+	padding: 0 2rem;
+	cursor: pointer;
 }	
-.bayan__item{
+.bayan__container:hover .arrow_cross{
+	display: flex;
+	opacity: 1;
+	transition: all 1s ease;
+}
 
+.arrow_cross{
+	opacity: 0;
+}	
+
+.bayan__item{
+	width: 100%;
 	display: flex;
 	flex-direction: column;
-	align-content: center;
-	align-items: center;
-	}
+	border-top:  #a1a5a1 solid 0.05rem ;
+}
 
 .mem__image{
-	align-content: center;
-	align-items: center;
-	justify-content: center;
+	width: 100%;	
+	height: 100%;
+	display: none;
+}
+img {
+	width: 60%;
+	height: auto;
+	margin: 0 auto;
 	
 }
+
+.bayan__head label span{
+	display: inline-block;
+}
+input{
+	display: none;
+}
+input:checked {
+	display: block;
+}
+
+.bayan__head {
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: space-between;
+
+}
+
+#mem1:checked ~ .mem__image{
+	display:block;
+	opacity: 1;
+	visibility: visible;
+}
+#mem1 {
+	display: none;
+}
+
+
+.bayan__item:hover .mem__image{
+	display: flex;
+}
+.bayan__arrow{
+	writing-mode: vertical-rl;
+	margin-right: auto;
+	transform: rotate(45deg);
+}
+.bayan__item:hover .bayan__arrow{
+	transform: rotate(0);
+	transition: 0.5s;
+
+}
+
+/*
+.bayan__cross{
+	display: none;
+}
+.bayan__item:hover .bayan__cross{
+	display: block;
+	margin-right: auto;
+}
+*/
