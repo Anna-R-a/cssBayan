@@ -1,0 +1,139 @@
+html, 
+body {
+	line-height: 1;
+	font-size: calc(0.5em + 2vw);
+	background-color: #dbf5d6;
+	margin: 0 auto;
+	scroll-behavior: smooth;
+	box-sizing: border-box;
+	font-family:Arial, Helvetica, sans-serif;
+}
+
+.bayan__container {
+	max-width: 100%;
+	display: flex;
+	flex-direction: column;
+	overflow: hidden;
+	align-items: center;
+	margin: 0 5%;
+	color: rgb(9, 43, 196);
+}
+
+@media (min-width: 700px){
+	.bayan__container {
+		margin: 0 20%;
+	}
+}
+
+@media (min-width: 1000px){
+	.bayan__container {
+		margin: 0 25%;
+		font-size: calc(0.5em + 0.5vw);
+	}
+}
+@media (min-width: 1500px){
+	.bayan__container {
+		margin: 0 28%;
+	}
+}
+
+input[type=radio] {
+	display: none;
+}
+input[type=radio]:checked {
+	display: none;
+}
+
+h2{
+	color: #000;
+}
+h4{
+	margin: 2% 0;
+}
+
+
+label .mem__text{
+	height:min-content;
+	
+}
+
+.bayan__arrow{
+	transform: rotate(45deg);
+	cursor: pointer;
+}
+
+.arrow_cross{
+	opacity: 0;
+	cursor: pointer;
+}	
+
+.bayan__item{
+	width: 100%;
+	display: flex;
+	flex-direction: column;
+	border-top:  #bcbebc solid 0.05rem ;
+	cursor: pointer;
+	margin: 1%;
+	padding: 0;
+}
+
+.mem__image{
+	display: flex;
+	width: 80%;	
+	max-height: 0;
+	margin: 0 auto;
+	opacity: 0;
+	transition: 1s;
+	justify-content: center;
+	cursor: pointer;
+}
+
+img {
+	width: 80%;
+	margin: 0 auto;
+}
+
+.mem__text {
+	display: flex;
+	width: 100%;
+	justify-content: space-between;
+	align-items: center;
+	cursor: pointer;
+}
+
+.mem__input:checked ~.mem__image {
+	max-height: 20rem;
+	opacity: 1;
+	display: flex;
+	justify-content: center;
+}
+
+.mem__input:checked ~.mem__text {
+	color: #000;
+}
+
+.mem__input:checked+.mem__text>.arrow_cross>.bayan__arrow{
+	transform: rotate(0);
+}
+
+@media (hover: hover) {
+.bayan__container:hover .arrow_cross{
+	display: flex;
+	opacity: 1;
+	transition: all 1s ease;
+}
+
+.bayan__item:hover>.mem__image{
+	max-height: 20rem;
+	opacity: 1;
+}
+
+.bayan__item:hover .bayan__arrow{
+	transform: rotate(0);
+	transition: 0.5s;
+}
+
+.bayan__container:hover {
+	color: #000;
+}
+}
