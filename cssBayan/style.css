@@ -7,7 +7,7 @@ body {
 	scroll-behavior: smooth;
 	box-sizing: border-box;
 	font-family:Arial, Helvetica, sans-serif;
-	}
+}
 
 .bayan__container {
 	max-width: 100%;
@@ -73,14 +73,15 @@ label .mem__text{
 	flex-direction: column;
 	border-top:  #bcbebc solid 0.05rem ;
 	cursor: pointer;
-	margin: 1% 1% 0 1%;
+	margin: 1%;
 	padding: 0;
 }
 
 .mem__image{
 	display: flex;
-	width: 100%;	
+	width: 80%;	
 	max-height: 0;
+	margin: 0 auto;
 	opacity: 0;
 	transition: 1s;
 	justify-content: center;
